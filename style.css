@@ -1,0 +1,45 @@
+body{
+    padding: 20rem;
+    background-color: rgb(49, 140, 214);
+}
+.center{
+    perspective: 800px;
+    height: 200px;
+    width: 200px;
+    margin: 0 0 0 42%;
+}
+.box{
+    position: relative;
+    transform-style: preserve-3d;
+    width: 100%;
+    height: 100%;
+    transition: transform 5s ease-in-out;
+}
+.box:hover{
+    transform: rotateY(360deg);
+}
+.box div{
+    display: flex;
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    font-size: 2rem;
+    color: aliceblue;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+}
+.box__face--front { background: rgba(255, 85, 0, 0.7);}
+.box__face--back { background: rgba(187, 255, 0, 0.7);}
+.box__face--right { background: rgba(0, 255, 102, 0.7);}
+.box__face--left { background: rgba(0, 238, 255, 0.7);}
+.box__face--top { background: rgba(238, 0, 255, 0.7);}
+.box__face--bottom { background: rgba(255, 0, 0, 0.7);}
+
+.box__face--front {transform: rotateY(0) translateZ(100px);}
+.box__face--back {transform: rotateY(180deg) translateZ(100px);}
+.box__face--right {transform: rotateY(90deg) translateZ(100px);}
+.box__face--left {transform: rotateY(-90deg) translateZ(100px);}
+.box__face--top {transform: rotateX(90deg) translateZ(100px);}
+.box__face--bottom {transform: rotateX(-90deg) translateZ(100px);}
